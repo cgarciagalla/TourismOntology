@@ -1,0 +1,2046 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/TourismOntology#hasDate"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An attraction is classified as Good if its rating is higher than 3.5."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Good Attraction"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid18"
+    }, {
+      "@id" : "_:genid16"
+    }, {
+      "@id" : "_:genid12"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid20"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/r"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value" : "3.5"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/a"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/a"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/a"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Good"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A hotel is considered Bad if its rating is lower than 2.0."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bad Hotel"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid29"
+    }, {
+      "@id" : "_:genid27"
+    }, {
+      "@id" : "_:genid23"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid31"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/r"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value" : "2.0"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#lessThan"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/TourismOntology#hasDate"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bad"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A transport service with a high average cost (3 euros or more)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Expensive Transport"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid40"
+    }, {
+      "@id" : "_:genid38"
+    }, {
+      "@id" : "_:genid34"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid42"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/c"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "3"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/c"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Expensive"
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A transport service with a low average cost (less than 3 euros)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CheapTransport"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid51"
+    }, {
+      "@id" : "_:genid49"
+    }, {
+      "@id" : "_:genid45"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid53"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/c"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "3"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#lessThan"
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/c"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cheap"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/",
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2012-06-14"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "http://purl.org/dc/aboutdcmi#DCMI"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Dublin Core Metadata Element Set, Version 1.1"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/contributor",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The guidelines for using names of persons or organizations as creators also apply to contributors.  Typically, the name of a Contributor should be used to indicate the entity."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity responsible for making contributions to the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contributor"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/coverage",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Coverage"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity primarily responsible for making the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Creator"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/date",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A point or period of time associated with an event in the lifecycle of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An account of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Description"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/format",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The file format, physical medium, or dimensions of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Format"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/identifier",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to identify the resource by means of a string conforming to an identification system."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An unambiguous reference to the resource within a given context."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Identifier"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/language",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A language of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Language"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/publisher",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity responsible for making the resource available."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Publisher"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/relation",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A related resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Relation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/rights",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Information about rights held in and over the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rights"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/source",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A related resource from which the described resource is derived."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Source"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/subject",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Typically, the subject will be represented using keywords, key phrases, or classification codes.  Recommended best practice is to use a controlled vocabulary."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The topic of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Subject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/subject) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A name given to the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Title"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/type",
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The nature or genre of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/TourismOntology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "This ontology models tourism-related information, including cities, attractions, restaurants, hotels, transport systems, and events. It allows semantic representation and reasoning over various entities in the tourism domain. The ontology supports classification of instances, spatial relationships (e.g., location in city), and quality assessments (e.g., ratings, cost levels). It has been developed following the LOT methodology and includes SWRL rules and links to external resources like DBpedia."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "20-04-2025"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "30-04-2025"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@value" : "Carlos García Gallardo"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Tourism Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "v1.0.0.0"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/TourismOntology#hasDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#AndalusianRestaurant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A restaurant specialized in Andalusian cuisine."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AndalusianRestaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A place that draws visitors due to its interest or significance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Attraction"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Autobus_Madrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBussines" : [ {
+    "@value" : "Metro Madrid"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Autobus Madrid"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasPricePerNight" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.18"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bus"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A negative assessment indicating a poor or unsatisfactory experience."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bad"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#assessment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Barcelona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd" : [ {
+    "@value" : "2.1686"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud" : [ {
+    "@value" : "41.6488"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Barcelona"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CoastalCity"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Beach",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A pebbly or sandy shore by a body of water."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://dbpedia.org/resource/Beach"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Beach"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BeachHotel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A hotel located near a beach."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Beach Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BudgetHotel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A hotel designed primarily for business travelers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "BusinessHotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Bicycles available for public rental through a bike-sharing system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://dbpedia.org/resource/Bus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd" : [ {
+    "@value" : "-6.292"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud" : [ {
+    "@value" : "36.5297"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Cadiz"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CoastalCity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://dbpedia.org/resource/Cadiz"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CapitalCity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A city that functions as the seat of government of a country or region."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CapitalCity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Carnaval_Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-04-19"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Carnaval Cadiz"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#SportEvent"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Castillo_Zaragoza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Castillo Zaragoza"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5.0"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museum"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Castillo_Zaragoza_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Castillo Zaragoza"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5.0"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museum"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Catedral_Sevilla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Catedral Sevilla"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.1"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Beach"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cheap",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An assessment indicating that a product or service is low in price or affordable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cheap"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#assessment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@id" : "http://dbpedia.org/resource/City"
+  }, {
+    "@value" : "A large and permanent human settlement, usually with significant infrastructure and services."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "City"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CoastalCity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A city located near or along the coastline."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CoastalCity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Concierto_Sevilla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-02-22"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Concierto Sevilla"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#TecnologyEvent"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Congreso_Barcelona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-11-17"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Congreso Barcelona"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Barcelona"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CulturalEvent"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Congreso_Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-06-02"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Congreso Cadiz"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#SportEvent"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CulturalAtraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An attraction significant for its cultural value."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CulturalAttraction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CulturalEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An event celebrating arts, heritage, or culture."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CulturalEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An organized occasion such as a festival, concert, or exhibition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Event"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Expensive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An assessment indicating that a product or service is high in price or costly."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Expensive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#assessment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Festival_Madrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-07-21"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Festival Madrid"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#SportEvent"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#GastronomyEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An event that celebrates food, culinary arts, and gastronomy, often featuring tastings, chefs, or regional cuisine."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "GastronomyEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Good",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A positive assessment indicating a generally satisfactory or high-quality experience."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Good"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#assessment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the geographic longitude coordinate of a city."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasLongitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An establishment that provides lodging and meals to travelers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Palace_Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "287"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Hotel Palace Cadiz"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.8"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BudgetHotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Palace_Zaragoza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "120"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Hotel Royal Zaragoza"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.8"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#LuxuryHotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Royal_Madrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "50"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Hotel Royal Madrid"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.9"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#TurismHotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Royal_Madrid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "146"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Hotel Royal Madrid"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.4"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BudgetHotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Sol_Barcelona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "189"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Hotel Sol Barcelona"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.5"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Barcelona"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#RuralHotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Vista_Sevilla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "278"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Hotel Vista Sevilla"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.7"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BeachHotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#ItalianRestaurant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A restaurant specialized in Italian cuisine."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ItalianRestaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#JapaneseRestaurant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A restaurant specialized in Japanese cuisine."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://dbpedia.org/resource/Japanese_cuisine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "JapaneseRestaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#LuxuryHotel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A hotel offering high-end amenities and services."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Luxury Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd" : [ {
+    "@value" : "-3.7038"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud" : [ {
+    "@value" : "40.4168"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Madrid"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CapitalCity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@id" : "http://dbpedia.org/resource/Madrid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MediaterraneanRestaurant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A restaurant specialized in Mediterranean cuisine."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://dbpedia.org/resource/Mediterranean_cuisine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MediterraneanRestaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Metro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An underground railway system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Metro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MetroMadrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBussines" : [ {
+    "@value" : "Urban Madrid"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Metro Madrid"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasPricePerNight" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "8.85"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Metro"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MexicanRestaurant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A restaurant specialized in Mexican cuisine."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MexicanRestaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Monument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A structure erected to commemorate persons or events."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Monument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museo_Madrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Museo Madrid"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.7"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museum"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museo_Zaragoza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Museo Zaragoza"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.7"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museum"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A building where objects of historical, artistic, or scientific interest are kept and displayed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://dbpedia.org/resource/Museum"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Museum"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MusicEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An event centered around musical performances."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MusicEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Park",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A large public green area in a town, used for recreation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Park"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Parque_Madrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Parque Madrid"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.8"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CulturalAtraction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#PublicBike",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Bicycles available for public rental through a bike-sharing system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Public Bike"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An establishment where meals are prepared and served to customers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Restaurant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Delicia_Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "16"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Restaurante Delicia Cadiz"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.7"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MexicanRestaurant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Delicia_Zaragoza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "48"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Restaurante Delicia Zaragoza"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.9"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#JapaneseRestaurant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Gourmet_Madrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "30"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Restaurante Gourmet Madrid"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.8"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#JapaneseRestaurant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Gourmet_Zaragoza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "65"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Restaurante Gourmet Zaragoza"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.5"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#AndalusianRestaurant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Sabor_Sevilla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "72"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Restaurante Sabor Sevilla"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.1"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#ItalianRestaurant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#RuralHotel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A hotel located in a countryside or rural area."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rural Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd" : [ {
+    "@value" : "37.3886"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud" : [ {
+    "@value" : "-5.9823"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Sevilla"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CapitalCity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@id" : "http://dbpedia.org/resource/Sevilla%20"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#SportEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An event related to sports activities."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SportEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Taxi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A vehicle licensed to transport passengers in return for payment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://dbpedia.org/resource/Taxi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Taxi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Taxi_Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBussines" : [ {
+    "@value" : "Metro Cadiz"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Taxi Cadiz"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasPricePerNight" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.4"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Taxi"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#TecnologyEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An event focused on technological topics such as innovation, software, hardware, or digital transformation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TecnologyEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Tram",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rail vehicle that runs on tracks along public urban streets."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tram"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "rdfs:comment:\"An establishment where meals are prepared and served to customers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointUnionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bus"
+    }, {
+      "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Metro"
+    }, {
+      "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#PublicBike"
+    }, {
+      "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Taxi"
+    }, {
+      "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Tram"
+    } ]
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Tranvia_Zaragoza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBussines" : [ {
+    "@value" : "Urban Zaragoza"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Tranvia Zaragoza"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasPricePerNight" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.11"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Tram"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#TurismHotel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A hotel catering mainly to tourists."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Touristic Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd" : [ {
+    "@value" : "-0.8891"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud" : [ {
+    "@value" : "41.6488"
+  } ],
+  "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName" : [ {
+    "@value" : "Zaragoza"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CapitalCity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@id" : "http://dbpedia.org/resource/Zaragoza%20"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#assessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A structured evaluation or rating assigned to an entity, such as a hotel, restaurant, or attraction, typically based on user feedback or quality metrics."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Assessment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the price of the night at the hotel and restaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel"
+  }, {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasCost"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBeach",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates a coastal city to a beach attraction it possesses. It is a symmetric relation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasBeach"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Beach"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBussines",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the company or organization operating the transport service."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasBusiness"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Provides the date on which an event takes place."
+  }, {
+    "@value" : "hasDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the geographic latitude coordinate of a city."
+  }, {
+    "@value" : "hasLatitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the name of the entity, such as a hotel, restaurant, or city."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction"
+  }, {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City"
+  }, {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event"
+  }, {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel"
+  }, {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasPricePerNight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "indicates the average price of transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasAverageCost"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the user rating or evaluation score of an entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction"
+  }, {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel"
+  }, {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasRating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the number of stars assigned to a hotel as a quality indicator."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasStars"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates an entity to the city where it is located"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction"
+  }, {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel"
+  }, {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant"
+  }, {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "located in city"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates an event to the city where it is organized."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "organized in city"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/a",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/c",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/h",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/r",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#lessThan",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

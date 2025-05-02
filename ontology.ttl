@@ -1,0 +1,1045 @@
+@prefix : <http://www.semanticweb.org/cggallardo/ontologies/2025/3/TourismOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/cggallardo/ontologies/2025/3/TourismOntology#> .
+
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/TourismOntology> rdf:type owl:Ontology ;
+                                                                           <http://purl.org/dc/terms/description> "This ontology models tourism-related information, including cities, attractions, restaurants, hotels, transport systems, and events. It allows semantic representation and reasoning over various entities in the tourism domain. The ontology supports classification of instances, spatial relationships (e.g., location in city), and quality assessments (e.g., ratings, cost levels). It has been developed following the LOT methodology and includes SWRL rules and links to external resources like DBpedia." ;
+                                                                           <http://purl.org/dc/terms/issued> "20-04-2025"^^xsd:date ;
+                                                                           <http://purl.org/dc/terms/modified> "30-04-2025"^^xsd:date ;
+                                                                           <http://purl.org/dc/terms/publisher> "Carlos García Gallardo" ;
+                                                                           <http://purl.org/dc/terms/title> "Tourism Ontology" ;
+                                                                           owl:versionInfo "v1.0.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/TourismOntology#hasDate
+:hasDate rdf:type owl:ObjectProperty ;
+         rdfs:domain [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasDate ;
+                       owl:someValuesFrom <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event>
+                     ] .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBeach
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBeach> rdf:type owl:ObjectProperty ,
+                                                                                                owl:SymmetricProperty ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City> ;
+                                                                                       rdfs:range <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Beach> ;
+                                                                                       rdfs:comment "Relates a coastal city to a beach attraction it possesses. It is a symmetric relation." ;
+                                                                                       rdfs:label "hasBeach" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> rdf:type owl:ObjectProperty ;
+                                                                                            rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction> ,
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> ,
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant> ,
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport> ;
+                                                                                            rdfs:range <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City> ;
+                                                                                            rdfs:comment "Relates an entity to the city where it is located" ;
+                                                                                            rdfs:label "located in city" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> rdf:type owl:ObjectProperty ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event> ;
+                                                                                              rdfs:range <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City> ;
+                                                                                              rdfs:comment "Relates an event to the city where it is organized." ;
+                                                                                              rdfs:label "organized in city" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City> ;
+                                                                                          rdfs:range xsd:string ;
+                                                                                          rdfs:comment "Represents the geographic longitude coordinate of a city." ;
+                                                                                          rdfs:label "hasLongitude" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> rdf:type owl:DatatypeProperty ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> ,
+                                                                                                         <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant> ;
+                                                                                             rdfs:range xsd:int ;
+                                                                                             rdfs:comment "Indicates the price of the night at the hotel and restaurant" ;
+                                                                                             rdfs:label "hasCost" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBussines
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBussines> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport> ;
+                                                                                          rdfs:range xsd:string ;
+                                                                                          rdfs:comment "Specifies the company or organization operating the transport service." ;
+                                                                                          rdfs:label "hasBusiness" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate> rdf:type owl:DatatypeProperty ;
+                                                                                      rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event> ;
+                                                                                      rdfs:range xsd:date ;
+                                                                                      rdfs:comment "Provides the date on which an event takes place." ,
+                                                                                                   "hasDate" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud> rdf:type owl:DatatypeProperty ;
+                                                                                         rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City> ;
+                                                                                         rdfs:range xsd:string ;
+                                                                                         rdfs:comment "Represents the geographic latitude coordinate of a city." ,
+                                                                                                      "hasLatitude" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> rdf:type owl:DatatypeProperty ;
+                                                                                      rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction> ,
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City> ,
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event> ,
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> ,
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant> ;
+                                                                                      rdfs:range xsd:string ;
+                                                                                      rdfs:comment "Specifies the name of the entity, such as a hotel, restaurant, or city." ;
+                                                                                      rdfs:label "hasName" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasPricePerNight
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasPricePerNight> rdf:type owl:DatatypeProperty ;
+                                                                                               rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport> ;
+                                                                                               rdfs:range xsd:decimal ;
+                                                                                               rdfs:comment "indicates the average price of transport" ;
+                                                                                               rdfs:label "hasAverageCost" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> rdf:type owl:DatatypeProperty ;
+                                                                                        rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction> ,
+                                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> ,
+                                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant> ;
+                                                                                        rdfs:range xsd:decimal ;
+                                                                                        rdfs:comment "Represents the user rating or evaluation score of an entity" ;
+                                                                                        rdfs:label "hasRating" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars> rdf:type owl:DatatypeProperty ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> ;
+                                                                                       rdfs:range xsd:integer ;
+                                                                                       rdfs:comment "Indicates the number of stars assigned to a hotel as a quality indicator." ;
+                                                                                       rdfs:label "hasStars" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#AndalusianRestaurant
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#AndalusianRestaurant> rdf:type owl:Class ;
+                                                                                                   rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant> ;
+                                                                                                   rdfs:comment "A restaurant specialized in Andalusian cuisine." ;
+                                                                                                   rdfs:label "AndalusianRestaurant" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction> rdf:type owl:Class ;
+                                                                                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> ;
+                                                                                                               owl:someValuesFrom <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City>
+                                                                                                             ] ;
+                                                                                         rdfs:comment "A place that draws visitors due to its interest or significance." ;
+                                                                                         rdfs:label "Attraction" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bad
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bad> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#assessment> ;
+                                                                                  rdfs:comment "A negative assessment indicating a poor or unsatisfactory experience." ;
+                                                                                  rdfs:label "Bad" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Beach
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Beach> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction> ;
+                                                                                    rdfs:comment "A pebbly or sandy shore by a body of water." ;
+                                                                                    rdfs:isDefinedBy <http://dbpedia.org/resource/Beach> ;
+                                                                                    rdfs:label "Beach" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BeachHotel
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BeachHotel> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> ;
+                                                                                         rdfs:comment "A hotel located near a beach." ;
+                                                                                         rdfs:label "Beach Hotel" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BudgetHotel
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BudgetHotel> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> ;
+                                                                                          rdfs:comment "A hotel designed primarily for business travelers" ;
+                                                                                          rdfs:label "BusinessHotel" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bus
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bus> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport> ;
+                                                                                  rdfs:comment "Bicycles available for public rental through a bike-sharing system." ;
+                                                                                  rdfs:isDefinedBy <http://dbpedia.org/resource/Bus> ;
+                                                                                  rdfs:label "Bus" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CapitalCity
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CapitalCity> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City> ;
+                                                                                          rdfs:comment "A city that functions as the seat of government of a country or region." ;
+                                                                                          rdfs:label "CapitalCity" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cheap
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cheap> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#assessment> ;
+                                                                                    rdfs:comment "An assessment indicating that a product or service is low in price or affordable." ;
+                                                                                    rdfs:label "Cheap" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City> rdf:type owl:Class ;
+                                                                                   rdfs:comment <http://dbpedia.org/resource/City> ,
+                                                                                                "A large and permanent human settlement, usually with significant infrastructure and services." ;
+                                                                                   rdfs:label "City" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CoastalCity
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CoastalCity> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#City> ;
+                                                                                          rdfs:comment "A city located near or along the coastline." ;
+                                                                                          rdfs:label "CoastalCity" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CulturalAtraction
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CulturalAtraction> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction> ;
+                                                                                                rdfs:comment "An attraction significant for its cultural value." ;
+                                                                                                rdfs:label "CulturalAttraction" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CulturalEvent
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CulturalEvent> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event> ;
+                                                                                            rdfs:comment "An event celebrating arts, heritage, or culture." ;
+                                                                                            rdfs:label "CulturalEvent" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event> rdf:type owl:Class ;
+                                                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty :hasDate ;
+                                                                                                          owl:someValuesFrom <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event>
+                                                                                                        ] ;
+                                                                                    rdfs:comment "An organized occasion such as a festival, concert, or exhibition." ;
+                                                                                    rdfs:label "Event" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Expensive
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Expensive> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#assessment> ;
+                                                                                        rdfs:comment "An assessment indicating that a product or service is high in price or costly." ;
+                                                                                        rdfs:label "Expensive" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#GastronomyEvent
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#GastronomyEvent> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event> ;
+                                                                                              rdfs:comment "An event that celebrates food, culinary arts, and gastronomy, often featuring tastings, chefs, or regional cuisine." ;
+                                                                                              rdfs:label "GastronomyEvent" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Good
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Good> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#assessment> ;
+                                                                                   rdfs:comment "A positive assessment indicating a generally satisfactory or high-quality experience." ;
+                                                                                   rdfs:label "Good" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> rdf:type owl:Class ;
+                                                                                    rdfs:comment "An establishment that provides lodging and meals to travelers." ;
+                                                                                    rdfs:label "Hotel" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#ItalianRestaurant
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#ItalianRestaurant> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant> ;
+                                                                                                rdfs:comment "A restaurant specialized in Italian cuisine." ;
+                                                                                                rdfs:label "ItalianRestaurant" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#JapaneseRestaurant
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#JapaneseRestaurant> rdf:type owl:Class ;
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant> ;
+                                                                                                 rdfs:comment "A restaurant specialized in Japanese cuisine." ;
+                                                                                                 rdfs:isDefinedBy <http://dbpedia.org/resource/Japanese_cuisine> ;
+                                                                                                 rdfs:label "JapaneseRestaurant" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#LuxuryHotel
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#LuxuryHotel> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> ;
+                                                                                          rdfs:comment "A hotel offering high-end amenities and services." ;
+                                                                                          rdfs:label "Luxury Hotel" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MediaterraneanRestaurant
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MediaterraneanRestaurant> rdf:type owl:Class ;
+                                                                                                       rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant> ;
+                                                                                                       rdfs:comment "A restaurant specialized in Mediterranean cuisine." ;
+                                                                                                       rdfs:isDefinedBy <http://dbpedia.org/resource/Mediterranean_cuisine> ;
+                                                                                                       rdfs:label "MediterraneanRestaurant" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Metro
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Metro> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport> ;
+                                                                                    rdfs:comment "An underground railway system." ;
+                                                                                    rdfs:label "Metro" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MexicanRestaurant
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MexicanRestaurant> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant> ;
+                                                                                                rdfs:comment "A restaurant specialized in Mexican cuisine." ;
+                                                                                                rdfs:label "MexicanRestaurant" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Monument
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Monument> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction> ;
+                                                                                       rdfs:comment "A structure erected to commemorate persons or events." ;
+                                                                                       rdfs:label "Monument" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museum
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museum> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction> ;
+                                                                                     rdfs:comment "A building where objects of historical, artistic, or scientific interest are kept and displayed." ;
+                                                                                     rdfs:isDefinedBy <http://dbpedia.org/resource/Museum> ;
+                                                                                     rdfs:label "Museum" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MusicEvent
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MusicEvent> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event> ;
+                                                                                         rdfs:comment "An event centered around musical performances." ;
+                                                                                         rdfs:label "MusicEvent" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Park
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Park> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction> ;
+                                                                                   rdfs:comment "A large public green area in a town, used for recreation." ;
+                                                                                   rdfs:label "Park" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#PublicBike
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#PublicBike> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport> ;
+                                                                                         rdfs:comment "Bicycles available for public rental through a bike-sharing system." ;
+                                                                                         rdfs:label "Public Bike" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurant> rdf:type owl:Class ;
+                                                                                         rdfs:comment "An establishment where meals are prepared and served to customers." ;
+                                                                                         rdfs:label "Restaurant" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#RuralHotel
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#RuralHotel> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> ;
+                                                                                         rdfs:comment "A hotel located in a countryside or rural area." ;
+                                                                                         rdfs:label "Rural Hotel" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#SportEvent
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#SportEvent> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event> ;
+                                                                                         rdfs:comment "An event related to sports activities." ;
+                                                                                         rdfs:label "SportEvent" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Taxi
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Taxi> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport> ;
+                                                                                   rdfs:comment "A vehicle licensed to transport passengers in return for payment." ;
+                                                                                   rdfs:isDefinedBy <http://dbpedia.org/resource/Taxi> ;
+                                                                                   rdfs:label "Taxi" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#TecnologyEvent
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#TecnologyEvent> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Event> ;
+                                                                                             rdfs:comment "An event focused on technological topics such as innovation, software, hardware, or digital transformation." ;
+                                                                                             rdfs:label "TecnologyEvent" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Tram
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Tram> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport> ;
+                                                                                   rdfs:comment "A rail vehicle that runs on tracks along public urban streets." ;
+                                                                                   rdfs:label "Tram" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars> ;
+                                                                                                          owl:allValuesFrom xsd:integer
+                                                                                                        ] ;
+                                                                                        owl:disjointUnionOf ( <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bus>
+                                                                                                              <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Metro>
+                                                                                                              <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#PublicBike>
+                                                                                                              <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Taxi>
+                                                                                                              <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Tram>
+                                                                                                            ) ;
+                                                                                        rdfs:comment "rdfs:comment:\"An establishment where meals are prepared and served to customers." ;
+                                                                                        rdfs:label "Transport" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#TurismHotel
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#TurismHotel> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> ;
+                                                                                          rdfs:comment "A hotel catering mainly to tourists." ;
+                                                                                          rdfs:label "Touristic Hotel" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#assessment
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#assessment> rdf:type owl:Class ;
+                                                                                         rdfs:comment "A structured evaluation or rating assigned to an entity, such as a hotel, restaurant, or attraction, typically based on user feedback or quality metrics." ;
+                                                                                         rdfs:label "Assessment" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Autobus_Madrid
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Autobus_Madrid> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bus> ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid> ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBussines> "Metro Madrid" ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Autobus Madrid" ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasPricePerNight> 4.18 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Barcelona
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Barcelona> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CoastalCity> ;
+                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd> "2.1686" ;
+                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud> "41.6488" ;
+                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Barcelona" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CoastalCity> ;
+                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd> "-6.292" ;
+                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud> "36.5297" ;
+                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Cadiz" ;
+                                                                                    rdfs:isDefinedBy <http://dbpedia.org/resource/Cadiz> .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Carnaval_Cadiz
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Carnaval_Cadiz> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#SportEvent> ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz> ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate> "2024-04-19"^^xsd:date ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Carnaval Cadiz" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Castillo_Zaragoza
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Castillo_Zaragoza> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museum> ;
+                                                                                                <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza> ;
+                                                                                                <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Castillo Zaragoza" ;
+                                                                                                <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 5.0 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Castillo_Zaragoza_1
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Castillo_Zaragoza_1> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museum> ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza> ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Castillo Zaragoza" ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 5.0 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Catedral_Sevilla
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Catedral_Sevilla> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Beach> ;
+                                                                                               <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla> ;
+                                                                                               <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Catedral Sevilla" ;
+                                                                                               <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 4.1 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Concierto_Sevilla
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Concierto_Sevilla> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#TecnologyEvent> ;
+                                                                                                <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla> ;
+                                                                                                <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate> "2024-02-22"^^xsd:date ;
+                                                                                                <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Concierto Sevilla" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Congreso_Barcelona
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Congreso_Barcelona> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CulturalEvent> ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Barcelona> ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate> "2024-11-17"^^xsd:date ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Congreso Barcelona" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Congreso_Cadiz
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Congreso_Cadiz> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#SportEvent> ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz> ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate> "2024-06-02"^^xsd:date ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Congreso Cadiz" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Festival_Madrid
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Festival_Madrid> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#SportEvent> ;
+                                                                                              <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid> ;
+                                                                                              <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasDate> "2024-07-21"^^xsd:date ;
+                                                                                              <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Festival Madrid" .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Palace_Cadiz
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Palace_Cadiz> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BudgetHotel> ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz> ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> 287 ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Hotel Palace Cadiz" ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 4.8 ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars> 3 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Palace_Zaragoza
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Palace_Zaragoza> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#LuxuryHotel> ;
+                                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza> ;
+                                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> 120 ;
+                                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Hotel Royal Zaragoza" ;
+                                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 3.8 ;
+                                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars> 4 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Royal_Madrid
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Royal_Madrid> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#TurismHotel> ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid> ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> 50 ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Hotel Royal Madrid" ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 3.9 ;
+                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars> 4 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Royal_Madrid1
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Royal_Madrid1> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BudgetHotel> ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid> ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> 146 ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Hotel Royal Madrid" ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 4.4 ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars> 3 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Sol_Barcelona
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Sol_Barcelona> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#RuralHotel> ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Barcelona> ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> 189 ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Hotel Sol Barcelona" ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 3.5 ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars> 5 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Vista_Sevilla
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel_Vista_Sevilla> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#BeachHotel> ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla> ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> 278 ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Hotel Vista Sevilla" ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 4.7 ;
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasStars> 4 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CapitalCity> ;
+                                                                                     <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd> "-3.7038" ;
+                                                                                     <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud> "40.4168" ;
+                                                                                     <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Madrid" ;
+                                                                                     rdfs:comment <http://dbpedia.org/resource/Madrid> ;
+                                                                                     rdfs:isDefinedBy <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/> .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MetroMadrid
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MetroMadrid> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Metro> ;
+                                                                                          <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid> ;
+                                                                                          <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBussines> "Urban Madrid" ;
+                                                                                          <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Metro Madrid" ;
+                                                                                          <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasPricePerNight> 8.85 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museo_Madrid
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museo_Madrid> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museum> ;
+                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid> ;
+                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Museo Madrid" ;
+                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 3.7 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museo_Zaragoza
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museo_Zaragoza> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Museum> ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza> ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Museo Zaragoza" ;
+                                                                                             <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 3.7 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Parque_Madrid
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Parque_Madrid> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CulturalAtraction> ;
+                                                                                            <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#organizedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid> ;
+                                                                                            <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Parque Madrid" ;
+                                                                                            <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 3.8 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Delicia_Cadiz
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Delicia_Cadiz> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#MexicanRestaurant> ;
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz> ;
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> 16 ;
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Restaurante Delicia Cadiz" ;
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 4.7 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Delicia_Zaragoza
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Delicia_Zaragoza> rdf:type owl:NamedIndividual ,
+                                                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#JapaneseRestaurant> ;
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza> ;
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> 48 ;
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Restaurante Delicia Zaragoza" ;
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 3.9 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Gourmet_Madrid
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Gourmet_Madrid> rdf:type owl:NamedIndividual ,
+                                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#JapaneseRestaurant> ;
+                                                                                                         <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Madrid> ;
+                                                                                                         <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> 30 ;
+                                                                                                         <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Restaurante Gourmet Madrid" ;
+                                                                                                         <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 4.8 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Gourmet_Zaragoza
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Gourmet_Zaragoza> rdf:type owl:NamedIndividual ,
+                                                                                                                    <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#AndalusianRestaurant> ;
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza> ;
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> 65 ;
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Restaurante Gourmet Zaragoza" ;
+                                                                                                           <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 4.5 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Sabor_Sevilla
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Restaurante_Sabor_Sevilla> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#ItalianRestaurant> ;
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla> ;
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> 72 ;
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Restaurante Sabor Sevilla" ;
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> 4.1 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CapitalCity> ;
+                                                                                      <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Sevilla> ;
+                                                                                      <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd> "37.3886" ;
+                                                                                      <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud> "-5.9823" ;
+                                                                                      <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Sevilla" ;
+                                                                                      rdfs:comment <http://dbpedia.org/resource/Sevilla%20> .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Taxi_Cadiz
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Taxi_Cadiz> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Taxi> ;
+                                                                                         <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cadiz> ;
+                                                                                         <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBussines> "Metro Cadiz" ;
+                                                                                         <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Taxi Cadiz" ;
+                                                                                         <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasPricePerNight> 3.4 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Tranvia_Zaragoza
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Tranvia_Zaragoza> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Tram> ;
+                                                                                               <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#locatedInCity> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza> ;
+                                                                                               <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasBussines> "Urban Zaragoza" ;
+                                                                                               <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Tranvia Zaragoza" ;
+                                                                                               <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasPricePerNight> 1.11 .
+
+
+###  http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Zaragoza> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#CapitalCity> ;
+                                                                                       <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#HasLongiutd> "-0.8891" ;
+                                                                                       <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasLatitud> "41.6488" ;
+                                                                                       <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasName> "Zaragoza" ;
+                                                                                       rdfs:comment <http://dbpedia.org/resource/Zaragoza%20> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/elements/1.1/> <http://purl.org/dc/terms/modified> "2012-06-14"^^xsd:date ;
+                                   <http://purl.org/dc/terms/publisher> <http://purl.org/dc/aboutdcmi#DCMI> ;
+                                   <http://purl.org/dc/terms/title> "Dublin Core Metadata Element Set, Version 1.1"@en .
+
+
+<http://purl.org/dc/elements/1.1/contributor> <http://purl.org/dc/terms/description> "The guidelines for using names of persons or organizations as creators also apply to contributors.  Typically, the name of a Contributor should be used to indicate the entity."@en ;
+                                              <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                              rdfs:comment "An entity responsible for making contributions to the resource."@en ;
+                                              rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                              rdfs:label "Contributor"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/coverage> <http://purl.org/dc/terms/description> "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges."@en ;
+                                           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                           rdfs:comment "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."@en ;
+                                           rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                           rdfs:label "Coverage"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
+                                          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                          rdfs:comment "An entity primarily responsible for making the resource."@en ;
+                                          rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                          rdfs:label "Creator"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/date> <http://purl.org/dc/terms/description> "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing."@en ;
+                                       <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                       rdfs:comment "A point or period of time associated with an event in the lifecycle of the resource."@en ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                       rdfs:label "Date"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/description> <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
+                                              <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                              rdfs:comment "An account of the resource."@en ;
+                                              rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                              rdfs:label "Description"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/format> <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."@en ;
+                                         <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                         rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
+                                         rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                         rdfs:label "Format"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/identifier> <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en ;
+                                             <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                             rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+                                             rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                             rdfs:label "Identifier"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/language> <http://purl.org/dc/terms/description> "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag."@en ;
+                                           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                           rdfs:comment "A language of the resource."@en ;
+                                           rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                           rdfs:label "Language"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/publisher> <http://purl.org/dc/terms/description> "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."@en ;
+                                            <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                            rdfs:comment "An entity responsible for making the resource available."@en ;
+                                            rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                            rdfs:label "Publisher"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/relation> <http://purl.org/dc/terms/description> "Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided."@en ;
+                                           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                           rdfs:comment "A related resource."@en ;
+                                           rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                           rdfs:label "Relation"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/rights> <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
+                                         <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                         rdfs:comment "Information about rights held in and over the resource."@en ;
+                                         rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                         rdfs:label "Rights"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/source> <http://purl.org/dc/terms/description> "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
+                                         <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                         rdfs:comment "A related resource from which the described resource is derived."@en ;
+                                         rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                         rdfs:label "Source"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/subject> <http://purl.org/dc/terms/description> "Typically, the subject will be represented using keywords, key phrases, or classification codes.  Recommended best practice is to use a controlled vocabulary."@en ;
+                                          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                          rdfs:comment "The topic of the resource."@en ;
+                                          rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                          rdfs:label "Subject"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/subject) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/title> <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                        rdfs:comment "A name given to the resource."@en ;
+                                        rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                        rdfs:label "Title"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+<http://purl.org/dc/elements/1.1/type> <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
+                                       <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                       rdfs:comment "The nature or genre of the resource."@en ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                       rdfs:label "Type"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "An attraction is classified as Good if its rating is higher than 3.5." ;
+   rdfs:label "Good Attraction" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Attraction> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/a> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/r> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 3.5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Good> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/a>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "A hotel is considered Bad if its rating is lower than 2.0." ;
+   rdfs:label "Bad Hotel" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Hotel> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/h>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasRating> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/h> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/r> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 2.0 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Bad> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/h>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "A transport service with a high average cost (3 euros or more)" ;
+   rdfs:label "Expensive Transport" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/c> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 3 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Expensive> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "A transport service with a low average cost (less than 3 euros)." ;
+   rdfs:label "CheapTransport" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Transport> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#hasAverageCost> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/c> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 3 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2#Cheap> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/cggallardo/ontologies/2025/3/untitled-ontology-2/t>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
